@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "typeRoots": ["./node_modules/@types"],
+    "outDir": "./build",
+    "esModuleInterop": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "test",
+    "**/__tests__/**/*",
+    "**/__mocks__/**/*"
+  ],
+  "include": [
+    "src/"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "dev": {
+    "host": "localhost",
+    "user": "albany",
+    "password": "challenge",
+    "database": "dev",
+    "port": 5432,
+    "driver": "pg"
+  },
+  "test": {
+    "host": "localhost",
+    "user": "albany",
+    "password": "challenge",
+    "database": "test",
+    "port": 5432,
+    "driver": "pg"
+  },
+  "sql-file": true
+}
