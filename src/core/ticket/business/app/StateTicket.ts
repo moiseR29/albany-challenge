@@ -13,11 +13,12 @@ const Log: Logger = new Logger('State Ticket');
 const hasPermissions = (
   tokenData: TokenData,
   ticket: Ticket,
-  isUpdateActive: boolean,
+  body: any,
 ): boolean => {
   let greatPermission = true;
 
-  if (isUpdateActive) {
+  // eslint-disable-next-line no-prototype-builtins
+  if (body.hasOwnProperty('active')) {
     if (tokenData.type !== TYPE_USER.TECHNICAL) greatPermission = false;
   } else {
     if (!ticket.active) greatPermission = false;
@@ -60,7 +61,7 @@ export const StateTicket = async (
   let [ticket] = tickets;
 
   // TODO verify !body.active
-  if (!hasPermissions(tokenData, ticket, !body.active))
+  if (!hasPermissions(tokenData, ticket, body))
     throw AlbanyError.GenericError(`You don´t have permission`);
 
   const newActive = body.active ?? ticket.active;

@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf build && tsc",
     "start": "npm run build && node build/index",
-    "db:migration": "sh ./scripts/migrations.sh dev"
+    "db:migration": "sh ./scripts/migrations.sh dev",
+    "db:create": "sh ./scripts/db-local.sh"
   },
   "keywords": [],
   "author": "",

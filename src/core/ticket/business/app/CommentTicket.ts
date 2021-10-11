@@ -48,5 +48,5 @@ export const CommentTicket = async (
 
   await commentDAO.insert(comment);
 
-  return tickets[0];
+  return (await dao.selectById(tickets[0].ticketId!))[0];
 };
