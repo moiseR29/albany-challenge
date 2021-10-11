@@ -126,14 +126,12 @@ yarn db:create && yarn db:migration
 3. execute server
   - local
     ```bash
-    yarn start 
+    yarn build && yarn start
     ```
   - docker
     ```bash
-    docker build -t albany-docker . && docker start --name albany-challenge -p 8080:8080 --link albany-database -d albany-docker 
+    yarn start:docker
     ```
-
-> if use docker, change host database for albany-database
 
 # API
 

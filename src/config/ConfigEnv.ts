@@ -9,7 +9,9 @@ export const DevelopConfig: Config = {
     user: 'albany',
     password: 'challenge',
     database: 'dev',
-    host: 'localhost',
+    host: process.env.NODE_ENV
+      ? process.env.HOST_DB_DOCKER!
+      : process.env.HOST_DB!,
   },
   session: {
     salt: 10,
@@ -47,7 +49,9 @@ export const DefaultConfig: Config = {
     user: 'albany',
     password: 'challenge',
     database: 'dev',
-    host: 'localhost',
+    host: process.env.NODE_ENV
+      ? process.env.HOST_DB_DOCKER!
+      : process.env.HOST_DB!,
   },
   session: {
     salt: 10,

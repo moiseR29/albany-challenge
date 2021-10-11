@@ -1,0 +1,9 @@
+build
+migrations
+node_modules
+scripts
+README.md
+.editorconfig
+.eslint*
+.prettierrc
+LICENSE
